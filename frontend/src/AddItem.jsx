@@ -85,4 +85,4 @@ AddItem.propTypes = {
     err: PropTypes.string.isRequired
 };
 
-export default AddItem
+export default AddItem;
