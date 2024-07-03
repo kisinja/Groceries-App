@@ -3,7 +3,6 @@ import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
 import { useState } from "react";
-import { useSnackbar } from 'notistack';
 import SearchItem from "./SearchItem";
 
 const App = () => {
@@ -14,7 +13,6 @@ const App = () => {
 
   const [search, setSearch] = useState('');
 
-  const { enqueueSnackbar } = useSnackbar();
 
   const setAndSaveItems = (items) => {
     setItems(items);
@@ -23,13 +21,11 @@ const App = () => {
 
   const handleCheck = (id) => {
     const listItems = items.map((item) => item.id === id ? { ...item, checked: !item.checked } : item);
-    enqueueSnackbar('Grocery Item Updated Successfully', { variant: 'success' });
     setAndSaveItems(listItems);
   }
 
   const handleDelete = (id) => {
     const listItems = items.filter((item) => item.id !== id);
-    enqueueSnackbar('Grocery Item Deleted Successfully', { variant: 'success' });
     setAndSaveItems(listItems);
   }
 
