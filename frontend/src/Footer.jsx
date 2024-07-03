@@ -8,7 +8,7 @@ const Footer = ({ items }) => {
                 className="main-heading"
                 style={{ fontSize: "18px" }}
             >
-                You have {items.length} list items
+                {items.length > 0 ? `You have ${items.length} items in your list` : "No items in your list"}
             </p>
         </footer>
     );
