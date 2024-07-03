@@ -3,7 +3,10 @@ import { FaPlus } from 'react-icons/fa';
 
 const AddItem = ({ name, setName, handleSubmit, description, setDescription, checked, setChecked, err }) => {
     return (
-        <form className='form' style={{ backgroundColor: "#f4f4f4", marginBottom: "20px", marginTop: "20px" }}>
+        <form
+            className='form'
+            style={{ backgroundColor: "#f4f4f4", marginBottom: "20px", marginTop: "20px" }}
+        >
             <h3 id='add-more'>Add More Items</h3>
             <div>
                 <label
